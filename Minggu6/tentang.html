@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Biography, Indonesia, Programmer, People, C++, HTML, Dian Nuswantoro UNiversity, UDINUS">
+        <meta name="description" content="Gilbert Steve's Web | Tugas Pemrograman Berbasis Web">
+        <meta name="author" content="Gilbert Steve Peter Siagian">
+        <title>Gilbert Siagian's Website - About Me</title>
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    </head>
+    <body style="background-color: white;">
+        <nav style="text-align: center;">
+            <a href="index.html">Home</a>
+            <a href="cv-name.pdf">Download CV</a>
+            <a href="kontak.html">Contact</a>
+            <a href="tentang.html">About Me</a>
+            <a href="achievement.html">Achievement</a>
+        </nav>
+        <hr>
+        <article style="background-color: wheat;">
+            <h1 style="text-align: center;">About Me</h1>
+            <p>
+                Hi, I'm Gilbert Steve Peter Siagian, Dian Nuswantoro University's College Student. <br>
+                I'm a web developer who's currently learning HTML 5.<br>
+            </p>
+            <p>
+                I'm still new in web development, but now<br>
+                I'm trying my best at it.<br>
+            </p>
+            <p>
+                I want to master HTML, CSS, and JavaScript language.<br>
+                This is one of the video that I use for testing my websites.
+            </p>
+                <button onclick="playVid()" type="button">Play</button>
+			    <button onclick="pauseVid()" type="button">Pause</button>
+                <button onclick="enableLoop()" type="button">Enable loop</button>
+                <button onclick="disableLoop()" type="button">Disable loop</button>
+                <button onclick="enableControls()" type="button">Enable controls</button>
+                <button onclick="disableControls()" type="button">Disable controls</button>
+                <button onclick="enableMute()" type="button">Muted</button>
+                <button onclick="disableMute()" type="button">Unmute</button> 
+            <p>
+                <video id="myVideo" width="600" height="350" controls>
+                    <source src="video/video-about.mp4" type="video/mp4">
+                </video>
+                <script>
+                    var vid = document.getElementById("myVideo");	
+                        function playVid() {
+                            vid.play();
+                        }
+
+                        function pauseVid() {
+                            vid.pause();
+                        }
+
+                        function enableControls() { 
+                            vid.controls = true;
+                            vid.load();
+                        } 
+
+                        function disableControls() { 
+                            vid.controls = false;
+                            vid.load();
+                        } 
+
+                        function enableLoop() { 
+                            vid.loop = true;
+                            vid.load();
+                        } 
+
+                        function disableLoop() { 
+                            vid.loop = false;
+                            vid.load();
+                        } 
+
+                        function enableMute() {
+                            vid.muted = true;
+                            vid.load()
+                        }
+                        
+                        function disableMute() {
+                            vid.muted = false;
+                            vid.load()
+                        }
+                </script>
+            </p>
+        </article>
+        <hr>
+        <footer style="text-align: center;">
+            <p>Copyright &copy; 2022 Gilbert Steve Peter Siagian.</p>
+        </footer>
+
+    </body>
+</html>

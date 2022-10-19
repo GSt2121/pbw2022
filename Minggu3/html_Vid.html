@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--dibuat oleh Gilbert Steve Peter Siagian, NIM : A11.2022.14682 pada 26 September 2022-->
+<html>
+	<body>
+		<h1>
+			HTML VIDEO
+		</h1>
+		
+			<button onclick="playVid()" type="button">Play</button>
+			<button onclick="pauseVid()" type="button">Pause</button>
+			<button onclick="enableLoop()" type="button">Enable loop</button>
+			<button onclick="disableLoop()" type="button">Disable loop</button>
+			<button onclick="checkLoop()" type="button">Check loop status</button>
+			<button onclick="enableControls()" type="button">Enable controls</button>
+			<button onclick="disableControls()" type="button">Disable controls</button>
+			<button onclick="checkControls()" type="button">Check controls status</button><br> 
+			
+		<video controls width="600" id="myVideo">
+			<source src="VID-20220926-WA0039.mp4" type="video/mp4">
+			<track src="subtitle.vtt">
+			
+		</video>
+		
+		<script>
+			var vid = document.getElementById("myVideo");	
+				function playVid() {
+					vid.play();
+				}
+
+				function pauseVid() {
+					vid.pause();
+				}
+
+				function enableControls() { 
+				  vid.controls = true;
+				  vid.load();
+				} 
+
+				function disableControls() { 
+				  vid.controls = false;
+				  vid.load();
+				} 
+
+				function checkControls() { 
+				  alert(vid.controls);
+				} 
+				
+				function enableLoop() { 
+				  vid.loop = true;
+				  vid.load();
+				} 
+
+				function disableLoop() { 
+				  vid.loop = false;
+				  vid.load();
+				} 
+
+				function checkLoop() { 
+				  alert(vid.loop);
+				} 
+		</script>
+		
+	</body>
+</html>
+
